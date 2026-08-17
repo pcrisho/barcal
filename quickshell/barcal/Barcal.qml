@@ -43,6 +43,11 @@ Panel {
   readonly property bool viewingCurrentMonth: viewYear === today.getFullYear() && viewMonth === today.getMonth()
 
   readonly property color ink: bar ? bar.foreground : Color.foreground
+
+  // The ModuleSlot sizes itself from the widget's implicit size; Panel does
+  // not forward its children's, so the bar button has to be explicit.
+  implicitWidth: button.implicitWidth
+  implicitHeight: button.implicitHeight
   readonly property string fontFamily: bar ? bar.fontFamily : Style.font.family
 
   // ---- Grid geometry, mirroring omarchy.clock's calendar popup.
