@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "barcal.barcal",
+  "name": "Barcal calendar",
+  "version": "0.1.0",
+  "author": "barcal contributors",
+  "license": "MIT",
+  "description": "Calendar popup with events from Caldir .ics files, themed to match Omarchy",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Barcal.qml"
+  },
+  "barWidget": {
+    "displayName": "Barcal calendar",
+    "description": "Month grid with event days from Caldir, themed to match Omarchy",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "left",
+    "defaults": {
+      "interval": 60
+    },
+    "schema": [
+      {
+        "key": "interval",
+        "type": "number",
+        "label": "Refresh interval",
+        "description": "Seconds between barcal-render runs."
+      }
+    ]
+  }
+}

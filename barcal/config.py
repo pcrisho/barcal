@@ -8,6 +8,8 @@ from pathlib import Path
 
 DEFAULT_CONFIG_PATH = Path.home() / ".config" / "barcal" / "config.toml"
 
+DEFAULT_REVISION_PATH = Path.home() / ".cache" / "barcal" / "revision"
+
 DEFAULT_AGENDA_TERMINAL_CMD = "omarchy launch floating terminal with presentation"
 
 

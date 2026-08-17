@@ -124,9 +124,10 @@ def test_missing_caldir_dir(tmp_path):
 
 def test_payload_structure(tmp_path):
     payload = render_json(tmp_path, today="2026-08-16", month=AUGUST)
-    assert set(payload.keys()) == {"text", "class", "palette", "week", "events"}
+    assert set(payload.keys()) == {"text", "class", "palette", "week", "revisionPath", "events"}
     for key in ("mode", "accent", "muted", "background", "foreground", "selection"):
         assert key in payload["palette"]
+    assert payload["revisionPath"].endswith("barcal/revision")
 
 
 def test_month_override_switches_grid(tmp_path):

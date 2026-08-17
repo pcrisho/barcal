@@ -12,7 +12,7 @@ from pathlib import Path
 import icalendar
 import recurring_ical_events
 
-from barcal.config import Config, load_config
+from barcal.config import Config, DEFAULT_REVISION_PATH, load_config
 from barcal.theme import resolve_palette
 
 MONTH_ABBREVIATIONS = [
@@ -185,6 +185,7 @@ def build_payload(
         "class": "has-events" if today_key in events_by_date else "no-events",
         "palette": palette,
         "week": {"firstDay": cfg.first_day_of_week, "weekNumbers": True},
+        "revisionPath": str(DEFAULT_REVISION_PATH),
         "events": events_payload(events_by_date),
     }
 

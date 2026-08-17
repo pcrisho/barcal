@@ -12,9 +12,8 @@ from pathlib import Path
 from watchdog.events import PatternMatchingEventHandler
 from watchdog.observers import Observer
 
-from barcal.config import Config, load_config
+from barcal.config import Config, DEFAULT_REVISION_PATH, load_config
 
-DEFAULT_REVISION_PATH = Path.home() / ".cache" / "barcal" / "revision"
 DEBOUNCE_SECONDS = 0.5
 WATCH_RETRY_SECONDS = 2.0
 LOOP_INTERVAL = 0.5

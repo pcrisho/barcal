@@ -17,9 +17,15 @@ Glance at your Google Calendar (or iCloud / Outlook / CalDAV) from the topbar wi
 
 _Coming soon: `curl | sh` install script and `barcal-git` AUR package._
 
+## Widget
+
+The bar widget lives in [`quickshell/barcal/`](quickshell/barcal/README.md) —
+copy it to `~/.config/omarchy/plugins/<user>.barcal` and add it to the bar
+layout in `~/.config/omarchy/shell.json`.
+
 ## Configure
 
-_Coming soon: shell.json placement, config.toml reference, and the "relationship to rencal" section._
+_Coming soon: config.toml reference and the "relationship to rencal" section._
 
 ## Development
 
