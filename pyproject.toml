@@ -1,0 +1,19 @@
+[project]
+name = "barcal"
+version = "0.1.0"
+description = "Calendar widget for the Omarchy bar (Quickshell), powered by Caldir"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "icalendar>=5.0",
+    "recurring-ical-events>=2.0",
+    "watchdog>=4.0",
+]
+
+[project.scripts]
+barcal-render = "barcal.render:main"
+barcal-watcher = "barcal.watcher:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
