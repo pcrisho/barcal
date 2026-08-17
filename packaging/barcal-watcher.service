@@ -1,0 +1,14 @@
+[Unit]
+Description=barcal calendar watcher
+Documentation=https://github.com/pcrisho/barcal
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/barcal-watcher
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=graphical-session.target
